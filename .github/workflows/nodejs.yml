@@ -24,4 +24,11 @@ jobs:
 
       - name: Run tests
         run: npm test
+       
+      # Step 5: Set up Docker
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
 
+    # Step 6: Build Docker image
+      - name: Build Docker image
+        run: docker build -t devops-demo .
